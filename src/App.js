@@ -15,7 +15,7 @@ function App() {
           <Route path="/loading" element={<Loading />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/" element={<Home />} />
-          <Route path="/details/:name" element={<Detail />} />
+          {/* <Route path="/details/:name" element={<Detail />} /> */}
         </Routes>
       </Router>
     </div>
