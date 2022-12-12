@@ -17,7 +17,16 @@ function RandomCard() {
     return (
         <div className="RandomCard">
             <h2>Meal of the Day</h2>
-            <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} />
+            <article>
+                <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} />
+                <h2>{randomRecipe?.strMeal}</h2>
+                <div>
+                    <p>{randomRecipe?.strArea}</p>
+                    <p>{randomRecipe?.strCategory}</p>
+                </div>
+
+            </article>
+
         </div>
     );
 

@@ -1,3 +1,27 @@
 .RandomCard img {
-    width: 30%;
+    /* translate: 240% -10%; */
+    width: 35%;
+    border-radius: 30px;
+    align-self: flex-end;
+}
+
+.RandomCard article {
+    display: flex;
+    flex-direction: column;
+    color: #fafafa;
+
+    /* background-image: url("../../assets//img/randomBg.svg"); */
+    background-color: #3DA0A7;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    border-radius: 10px;
+    padding: 1rem;
+    /* padding-left: 1rem; */
+}
+
+.RandomCard article div {
+    display: flex;
+    justify-content: space-between;
 }
