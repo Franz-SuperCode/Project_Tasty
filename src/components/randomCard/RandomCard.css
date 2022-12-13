@@ -1,15 +1,22 @@
+.Home {
+    padding: 2rem;
+}
+
+
 .RandomCard img {
     /* translate: 240% -10%; */
-    width: 35%;
+    width: 50%;
     border-radius: 30px;
     align-self: flex-end;
 }
 
 .RandomCard article {
     display: flex;
-    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* gap: 2rem; */
+    /* flex-direction: column; */
     color: #fafafa;
-
     /* background-image: url("../../assets//img/randomBg.svg"); */
     background-color: #3DA0A7;
     background-position: center;
@@ -21,7 +28,26 @@
     /* padding-left: 1rem; */
 }
 
-.RandomCard article div {
+.randomDiv1 {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.randomDiv2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.randomLink {
+    text-decoration: none;
 }
