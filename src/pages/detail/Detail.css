@@ -1,0 +1,7 @@
+.detailsShown {
+    display: inline-block;
+}
+
+.detailsHidden {
+    display: none;
+}
