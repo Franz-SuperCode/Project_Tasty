@@ -51,6 +51,8 @@ function Detail() {
     ingredientArray.push(detailData?.strMeasure20 + " " + detailData?.strIngredient20);
 
 
+    // console.log(detailData?.strInstructions)
+
     // for (let i = 1; i <= 20; i++) {
     //     // if ()
     //     console.log(detailData?.strIngredient + `${i}`);
@@ -69,7 +71,8 @@ function Detail() {
     // Switch between ingredients and instructions
     const [detailsIngredients, setDetailsIngredients] = useState("detailsShown");
     const [detailsInstructions, setDetailsInstructions] = useState("detailsHidden");
-
+    const [switchColorIng, setSwitchColorIng] = useState("buttonActive");
+    const [switchColorIns, setSwitchColorIns] = useState("");
 
     return (
         <div className="detailsWrapper">
@@ -85,21 +88,29 @@ function Detail() {
                     <p className="detailsLight">{detailData?.strArea}</p>
                 </section>
                 <section className="detailsSwitch">
-                    <button type="button" onClick={() => {
+                    <button className={`${switchColorIng}`} type="button" onClick={() => {
                         setDetailsIngredients("detailsShown");
                         setDetailsInstructions("detailsHidden");
+                        setSwitchColorIng("buttonActive");
+                        setSwitchColorIns("buttonInactive");
                     }}>Ingredients</button>
-                    <button type="button" onClick={() => {
+                    <button className={`${switchColorIns}`} type="button" onClick={() => {
                         setDetailsIngredients("detailsHidden");
                         setDetailsInstructions("detailsShown");
+                        setSwitchColorIng("buttonInactive")
+                        setSwitchColorIns("buttonActive")
                     }}>Instructions</button>
                 </section>
+
                 <section className={detailsIngredients}>
                     <h3 className="detailsMainSec">Ingredients</h3>
                     {ingredientArray.map((singleIngredient, index) => {
-                        if (singleIngredient !== " ") {
+                        {/* if (singleIngredient !== " ")  112 */ }
+
+                        if (ingredientArray[index].length > 2) {
                             return <p key={index}>{singleIngredient}</p>
                         }
+
                     })}
 
                 </section>
