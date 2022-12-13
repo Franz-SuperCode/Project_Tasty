@@ -5,3 +5,53 @@
 .detailsHidden {
     display: none;
 }
+
+.detailsWrapper {
+    width: 100%;
+}
+
+.detailsBgPic {
+    height: 50vh;
+    margin-bottom: -30px;
+    position: abolute;
+    top: 0;
+}
+
+.detailsBgPic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detailsLowerPart {
+    border-radius: 40px 40px 0 0;
+    /* margin-top: -50px; */
+    background-color: whitesmoke;
+    z-index: 10;
+    width: 100%;
+    min-height: 65vh;
+    padding: 2rem;
+    position: absolute;
+    top: 40vh;
+}
+
+.detailsTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0A2533;
+    margin-bottom: 1.2rem;
+}
+
+.detailsMedium {
+    color: #748189;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.detailsLight {
+    color: #748189;
+    font-weight: 350;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
