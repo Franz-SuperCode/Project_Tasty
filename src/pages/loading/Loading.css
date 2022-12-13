@@ -1,0 +1,11 @@
+.logo {
+    background-color: rgb(61, 160, 167, 1);
+    background-image: url(../../assets/img/Splash_Screen.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* das logo hat noch die Linien mit drinne, der weiße schriftzug muss nochmal alleine runtergeladen werden */
