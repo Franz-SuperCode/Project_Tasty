@@ -1,13 +1,11 @@
-import "./Buttons.css"
-import { useEffect, useState } from "react";
-
+import "./Buttons.css";
+import { Link } from "react-router-dom";
 
 function Buttons(props) {
-    <div>
-        <button>{props[0]}</button>
-        <button>{props[1]}</button>
-        <button>{props[2]}</button>
+    return (<div>
+        <Link className="areaButtons" to={props.buttonLink}>{props.buttonName}</Link>
     </div>
-}
+    );
+};
 
 export default Buttons;

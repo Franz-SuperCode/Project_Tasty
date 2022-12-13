@@ -5,3 +5,24 @@
     margin: 0.3rem;
     border-radius: 20px;
 }
+
+.homeAreaWrapper,
+.homeCatWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.areaButtonsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.catButtonWrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    overflow: scroll;
+}

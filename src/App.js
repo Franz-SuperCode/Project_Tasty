@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/details/:id" element={<Detail />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search/:value" element={<Search />} />
 
         </Routes>
       </Router>
