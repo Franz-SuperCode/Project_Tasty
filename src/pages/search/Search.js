@@ -1,2 +1,8 @@
-function Search() { return <div>test</div> }
-export default Search
+
+import Buttons from "../../components/buttons/Buttons";
+
+function Search() {
+
+}
+export default Search;
+
