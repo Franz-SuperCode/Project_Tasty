@@ -6,6 +6,10 @@ import SeeAll from "../../components/seeAll/SeeAll";
 import Categories from "../../components/categories/Categories";
 import Navbar from "../../components/navbar/Navbar";
 import { useEffect, useState } from "react";
+import homeBlau from "../../assets/img/homeBlau.svg"
+import lupeWhite from "../../assets/img/lupeWhite.svg"
+import favsWhite from "../../assets/img/favsWhite.svg"
+import profil from "../../assets/img/profilWhite.svg"
 
 
 function Home() {
@@ -69,7 +73,12 @@ function Home() {
                 />
             </section>
             <Categories />
-            <Navbar />
+            <Navbar
+                homeBlau={homeBlau}
+                lupeWhite={lupeWhite}
+                favs={favsWhite}
+                profil={profil}
+            />
         </div>
     );
 }
