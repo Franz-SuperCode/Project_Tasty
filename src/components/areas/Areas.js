@@ -76,20 +76,21 @@ function Areas() {
                     setNameBtn("See Less");
                 }
             }} name={nameBtn} />
-
-            {/* List of Buttons */}
-            {areasList?.map((singleArea, index) => {
-                return <Buttons key={index} buttonName={singleArea.strArea
-                } classBtn={index >= 2 ? see : " "} buttonLink={`/search/${singleArea.strArea}`} />
-            })}
-
+            <div className="buttonCloud">
+                {/* List of Buttons */}
+                {areasList?.map((singleArea, index) => {
+                    return <Buttons key={index} buttonName={singleArea.strArea
+                    } classBtn={index >= 2 ? see : " "} buttonLink={`/search/${singleArea.strArea}`} />
+                })}
+            </div>
             {/* Recipe overview */}
-            {chosenArea?.map((singleDish, index) => {
-                return <CategoriesDetail key={index} url={singleDish.strMealThumb
-                } name={singleDish.strMeal
-                } link={`/details/${singleDish.idMeal}`} />
-            })}
-
+            <div className="recipeCloud">
+                {chosenArea?.map((singleDish, index) => {
+                    return <CategoriesDetail key={index} url={singleDish.strMealThumb
+                    } name={singleDish.strMeal
+                    } link={`/details/${singleDish.idMeal}`} />
+                })}
+            </div>
         </div>
     )
 

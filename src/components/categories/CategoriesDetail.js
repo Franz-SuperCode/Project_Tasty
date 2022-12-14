@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./CategoriesDetail.css"
 
 function CategoriesDetail(props) {
     return (
