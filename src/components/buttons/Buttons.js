@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Buttons(props) {
     return (<div>
-        <Link className="areaButtons" to={props.buttonLink}>{props.buttonName}</Link>
+        <Link className={`areaButtons ${props.classBtn}`} to={props.buttonLink}>{props.buttonName}</Link>
     </div>
     );
 };
