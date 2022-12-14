@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import "./Detail.css";
 import { useParams } from "react-router-dom";
 
+import Navbar from "../../components/navbar/Navbar";
+import homeWhite from "../../assets/img/homeWhite.svg"
+import lupeBlau from "../../assets/img/lupeBlau.svg"
+import favsWhite from "../../assets/img/favsWhite.svg"
+import profil from "../../assets/img/profilWhite.svg"
+
 function Detail() {
 
     // Get params from url
@@ -124,6 +130,12 @@ function Detail() {
                     </article>
                 </section>
             </div>
+            <Navbar
+                homeBlau={homeWhite}
+                lupeWhite={lupeBlau}
+                favs={favsWhite}
+                profil={profil}
+            />
         </div>
     );
 };
