@@ -24,6 +24,15 @@ function Home() {
                 <SeeAll
                     allLink={"/search/areas"}
                 />
+                {/* ========== */}
+                {/* <div className="buttonCloud">
+                   
+                    {areasList?.map((singleArea, index) => {
+                        return <Buttons key={index} buttonName={singleArea.strArea
+                        } classBtn={index >= 2 ? see : " "} buttonLink={`/search/${singleArea.strArea}`} />
+                    })}
+                </div> */}
+                {/* ============ */}
             </section>
             <section className="areaButtonsWrapper">
                 <Buttons
@@ -53,7 +62,7 @@ function Home() {
                 <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/Chicken"} />
                 <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/Dessert"} />
             </div>
-          
+
             <Navbar
                 homeBlau={homeBlau}
                 lupeWhite={lupeWhite}
