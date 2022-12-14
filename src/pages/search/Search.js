@@ -1,4 +1,5 @@
 
+import Buttons from "../../components/buttons/Buttons";
 import Navbar from "../../components/navbar/Navbar";
 // import homeBlau from "../../assets/img/homeBlau.svg"
 import homeWhite from "../../assets/img/homeWhite.svg"
@@ -6,11 +7,11 @@ import lupeBlau from "../../assets/img/lupeBlau.svg"
 // import lupeWhite from "../../assets/img/lupeWhite.svg"
 import favsWhite from "../../assets/img/favsWhite.svg"
 import profil from "../../assets/img/profilWhite.svg"
-import CardList from "../../components/cardList/CardList";
+import Areas from "../../components/areas/Areas"
 
 function Search() {
     return (<div>
-        <CardList />
+        <Areas />
         <Navbar
             homeBlau={homeWhite}
             lupeWhite={lupeBlau}
