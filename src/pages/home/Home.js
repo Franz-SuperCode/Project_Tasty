@@ -5,6 +5,12 @@ import Buttons from "../../components/buttons/Buttons";
 import SeeAll from "../../components/seeAll/SeeAll";
 import Navbar from "../../components/navbar/Navbar";
 import CategoryButtons from "../../components/buttons/CategoryButtons";
+import { useEffect, useState } from "react";
+import homeBlau from "../../assets/img/homeBlau.svg"
+import lupeWhite from "../../assets/img/lupeWhite.svg"
+import favsWhite from "../../assets/img/favsWhite.svg"
+import profil from "../../assets/img/profilWhite.svg"
+
 
 
 function Home() {
@@ -63,12 +69,20 @@ function Home() {
                     allLink={"/search/category"}
                 />
             </section>
+
             <div className="catButtonWrapper">
                 <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/Beef"} />
                 <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/Chicken"} />
                 <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/Dessert"} />
             </div>
-            <Navbar />
+          
+            <Navbar
+                homeBlau={homeBlau}
+                lupeWhite={lupeWhite}
+                favs={favsWhite}
+                profil={profil}
+            />
+
         </div>
     );
 }

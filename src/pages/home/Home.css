@@ -6,7 +6,13 @@
     border-radius: 20px;
 }
 
-.homeAreaWrapper,
+.homeAreaWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
 .homeCatWrapper {
     display: flex;
     justify-content: space-between;

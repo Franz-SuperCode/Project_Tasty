@@ -3,29 +3,29 @@
 }
 
 
-.RandomCard img {
-    /* translate: 240% -10%; */
-    width: 50%;
-    border-radius: 30px;
-    align-self: flex-end;
+.randomTitle {
+    margin: 5px;
+    font-size: 1.3rem;
 }
 
 .RandomCard article {
-    display: flex;
     /* justify-content: space-between; */
-    align-items: center;
     /* gap: 2rem; */
     /* flex-direction: column; */
-    color: #fafafa;
     /* background-image: url("../../assets//img/randomBg.svg"); */
+    /* padding-left: 1rem; */
+    display: flex;
+    align-items: center;
+    color: #fafafa;
     background-color: #3DA0A7;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 50%;
+    width: 90%;
+    height: 110px;
     border-radius: 10px;
     padding: 1rem;
-    /* padding-left: 1rem; */
+    position: relative;
 }
 
 .randomDiv1 {
@@ -35,17 +35,30 @@
     align-items: flex-start;
     /* display: flex;
     flex-direction: column; */
+
 }
 
-.randomDiv2 {
+.randomTitle {
+    width: 65%;
+}
+
+/* .randomDiv2 {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
     text-align: center;
-    /* display: flex;
-    flex-direction: column; */
+    /* flex-direction: column;}  */
+
+.randomBild {
+    /* translate: 240% -10%; */
+    width: 49%;
+    border-radius: 100px;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 14px;
+    right: -38px;
 }
 
 .randomLink {

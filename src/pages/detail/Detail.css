@@ -2,6 +2,13 @@
     display: inline-block;
 }
 
+.detailsShown p {
+    padding: 0.5rem 1rem;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
 .detailsHidden {
     display: none;
 }
@@ -39,7 +46,7 @@
     font-size: 24px;
     font-weight: 700;
     color: #0A2533;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .detailsMedium {
@@ -53,5 +60,31 @@
     color: #748189;
     font-weight: 350;
     font-size: 16px;
-    margin-bottom: 0.5rem;
+}
+
+.detailsSwitch {
+    margin: 1rem 0;
+    background-color: #E6EbF2;
+    border-radius: 15px;
+}
+
+/* #042628; */
+
+
+.detailsSwitch button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    /* background-color: #E6EbF2; */
+    width: 50%;
+}
+
+.buttonActive {
+    background-color: #042628;
+    color: #fafafa;
+}
+
+.buttonInactive {
+    background-color: none;
+    color: #042628;
 }
