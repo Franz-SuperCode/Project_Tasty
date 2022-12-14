@@ -7,9 +7,12 @@ import lupeBlau from "../../assets/img/lupeBlau.svg"
 import favsWhite from "../../assets/img/favsWhite.svg"
 import profil from "../../assets/img/profilWhite.svg"
 import CardList from "../../components/cardList/CardList";
+import Searchbar from "../../components/searchbar/ Searchbar";
+
 
 function Search() {
     return (<div>
+        <Searchbar />
         <CardList />
         <Navbar
             homeBlau={homeWhite}
