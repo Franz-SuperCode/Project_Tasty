@@ -1,4 +1,5 @@
 
+import Areas from "../../components/areas/Areas";
 import Buttons from "../../components/buttons/Buttons";
 
 import Navbar from "../../components/navbar/Navbar";

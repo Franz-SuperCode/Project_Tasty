@@ -15,28 +15,6 @@ import profil from "../../assets/img/profilWhite.svg"
 
 function Home() {
 
-    // //Fetch Areas
-    // const [areas, setAreas] = useState();
-    // useEffect(() => {
-    //     fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
-    //         .then(response => response.json())
-    //         .then(areasAPI => {
-    //             setAreas(areasAPI.meals);
-    //             console.log(areasAPI.meals)
-    //         });
-    // }, []);
-
-    // //Fetch Areas
-    // const [categories, setCategories] = useState();
-    // useEffect(() => {
-    //     fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
-    //         .then(response => response.json())
-    //         .then(categoriesAPI => {
-    //             setCategories(categoriesAPI.meals);
-    //             console.log(categoriesAPI.meals)
-    //         });
-    // }, []);
-
     return (
         <div className="Home">
             <Searchbar />
