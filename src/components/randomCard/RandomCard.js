@@ -18,21 +18,23 @@ function RandomCard() {
     // Bild mit Text in einen Container der einen Hintergrund hat
     return (
         <div className="RandomCard">
-            <h2>Meal of the Day</h2>
+            <h2 className='randomTitle'>Meal of the Day</h2>
             <Link className='randomLink' to={`/details/${randomRecipe?.idMeal}`}>
-                <article>
+                <article className='blueBox'>
+                    <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} className="randomBild" />
                     <div className='randomDiv1'>
-                        <h2>{randomRecipe?.strMeal}</h2>
-                        <p>{randomRecipe?.strCategory}</p>
+                        <h2 className='randomTitle'>{randomRecipe?.strMeal}</h2>
+                        <p>{randomRecipe?.strCategory} - {randomRecipe?.strArea}</p>
+
                     </div>
-                    <div className='randomDiv2'>
-                        <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} />
-                        <p>{randomRecipe?.strArea}</p>
-                    </div>
+                    {/* <div className='randomDiv2'>
+                        <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} className="randomBild" />
+                         <p>{randomRecipe?.strArea}</p> 
+                </div>  */}
 
                 </article>
             </Link>
-        </div>
+        </div >
     );
 
 }
