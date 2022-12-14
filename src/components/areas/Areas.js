@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Buttons from "../buttons/Buttons";
 import CategoriesDetail from "../categories/CategoriesDetail";
 import SeeAll from "../seeAll/SeeAll";

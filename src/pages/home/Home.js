@@ -10,6 +10,7 @@ import homeBlau from "../../assets/img/homeBlau.svg"
 import lupeWhite from "../../assets/img/lupeWhite.svg"
 import favsWhite from "../../assets/img/favsWhite.svg"
 import profil from "../../assets/img/profilWhite.svg"
+import { Link } from "react-router-dom";
 
 
 
@@ -39,15 +40,29 @@ function Home() {
     }, []);
 
 
-    const [seeArea, setSeeArea] = useState("detailsShown");
-    const [seeCategory, setSeeCategory] = useState("detailsShown");
+    const [seeArea, setSeeArea] = useState("detailsHidden");
+    const [seeCategory, setSeeCategory] = useState("detailsHidden");
     // const [catOrAr, setCatOrAr] = useState("strArea");
     //Alle Buttons anzeigen / verstecken
     function showAllArea() {
-        seeArea === "detailsShown" ? setSeeArea("detailsHidden") : setSeeArea("detailsShown");
+        if (seeArea === "detailsShown") {
+            setSeeArea("detailsHidden")
+            document.querySelector(".areaButtonsWrapper").style.display = "flex"
+        } else {
+            setSeeArea("detailsShown")
+            document.querySelector(".areaButtonsWrapper").style.display = "none"
+        }
+
+
     }
     function showAllCategory() {
-        seeCategory === "detailsShown" ? setSeeCategory("detailsHidden") : setSeeCategory("detailsShown");
+        if (seeCategory === "detailsShown") {
+            setSeeCategory("detailsHidden")
+            document.querySelector(".catButtonWrapper").style.display = "flex";
+        } else {
+            setSeeCategory("detailsShown")
+            document.querySelector(".catButtonWrapper").style.display = "none"
+        }
     }
 
     return (
@@ -59,12 +74,14 @@ function Home() {
                 {/* <SeeAll
                     allLink={"/search/areas"}
                 /> */}
-                {/* ========== */}
+                {/* ========== Alle Area Buttons ============ */}
                 <button onClick={showAllArea} className="seeAllButton">seeAll</button>
                 {areas?.map((object, index) => {
                     console.log(object.strArea)
                     return (
-                        <button className={seeArea} key={index}>{object.strArea}</button>
+                        <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
+                            <button className="all_buttons" >{object.strArea} </button>
+                        </Link>
                     )
 
                 })}
@@ -88,17 +105,16 @@ function Home() {
 
             <section className="homeCatWrapper">
                 <h2>Categories</h2>
-                <SeeAll
+                {/* <SeeAll
                     allLink={"/search/category"}
-                />
-                {/* ========== */}
+                /> */}
+                {/* ========== Alle Category Buttons ============ */}
                 <button onClick={showAllCategory} className="seeAllButton">seeAll</button>
                 {categories?.map((object, index) => {
-                    console.log(object.strCategory);
-                    console.log(categories);
-
                     return (
-                        <button className={seeCategory} key={index}>{object.strCategory}</button>
+                        <Link to={`/search/${object.strCategory}`} className={seeCategory} key={index}>
+                            <button className="all_buttons"> {object.strCategory} </button>
+                        </Link>
                     )
 
                 })}
