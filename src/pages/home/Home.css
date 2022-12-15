@@ -7,16 +7,12 @@
 }
 
 .homeAreaWrapper {
-    display: flex;
-    justify-content: space-between;
     margin-top: 1rem;
     /* margin-bottom: 2rem; */
     height: 40px;
 }
 
 .homeCatWrapper {
-    display: flex;
-    justify-content: space-between;
     margin-top: 2rem;
     /* margin-bottom: 2rem; */
     height: 40px;
@@ -35,4 +31,15 @@
     height: 250px;
     overflow: scroll;
 
+}
+
+.all_buttons {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    background-color: #70B9BE;
+    border-radius: 25px;
+    color: #fafafa;
+    border: none;
 }
