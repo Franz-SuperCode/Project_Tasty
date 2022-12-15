@@ -42,14 +42,18 @@ function Home() {
 
     const [seeArea, setSeeArea] = useState("detailsHidden");
     const [seeCategory, setSeeCategory] = useState("detailsHidden");
+    const [nameButton1, setNameButton1] = useState();
+    const [nameButton2, setNameButton2] = useState();
     // const [catOrAr, setCatOrAr] = useState("strArea");
     //Alle Buttons anzeigen / verstecken
     function showAllArea() {
         if (seeArea === "detailsShown") {
-            setSeeArea("detailsHidden")
+            setSeeArea("detailsHidden");
+            setNameButton1("SeeAll")
             document.querySelector(".areaButtonsWrapper").style.display = "flex"
         } else {
             setSeeArea("detailsShown")
+            setNameButton1("SeeLess")
             document.querySelector(".areaButtonsWrapper").style.display = "none"
         }
 
@@ -57,10 +61,12 @@ function Home() {
     }
     function showAllCategory() {
         if (seeCategory === "detailsShown") {
-            setSeeCategory("detailsHidden")
+            setSeeCategory("detailsHidden");
+            setNameButton2("SeeAll");
             document.querySelector(".catButtonWrapper").style.display = "flex";
         } else {
-            setSeeCategory("detailsShown")
+            setSeeCategory("detailsShown");
+            setNameButton2("SeeLess");
             document.querySelector(".catButtonWrapper").style.display = "none"
         }
     }
@@ -75,7 +81,11 @@ function Home() {
                     allLink={"/search/areas"}
                 /> */}
                 {/* ========== Alle Area Buttons ============ */}
-                <button onClick={showAllArea} className="seeAllButton">seeAll</button>
+                {/* <button onClick={showAllArea} className="seeAllButton">seeAll</button> */}
+                <SeeAll
+                    functionBtn={showAllArea}
+                    name={nameButton1}
+                />
                 {areas?.map((object, index) => {
                     // console.log(object.strArea)
                     return (
@@ -107,6 +117,7 @@ function Home() {
                 <h2>Categories</h2>
                 <SeeAll
                     functionBtn={showAllCategory}
+                    name={nameButton2}
                 />
                 {/* ========== Alle Category Buttons ============ */}
                 {/* <button onClick={showAllCategory} className="seeAllButton">seeAll</button> */}
