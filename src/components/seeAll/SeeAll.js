@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 function SeeAll(props) {
-    console.log(props.type)
+    // console.log(props.type)
     // console.log(props[0])
 
 

@@ -11,7 +11,7 @@ function RandomCard() {
             .then(response => response.json())
             .then(randomAPI => {
                 setRandomRecipe(randomAPI.meals[0]);
-                console.log(randomAPI.meals[0]);
+                // console.log(randomAPI.meals[0]);
             });
     }, []);
 

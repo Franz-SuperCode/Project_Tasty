@@ -24,7 +24,7 @@ function Home() {
             .then(response => response.json())
             .then(areasAPI => {
                 setAreas(areasAPI.meals);
-                console.log(areasAPI.meals)
+                // console.log(areasAPI.meals)
             });
     }, []);
 
@@ -35,7 +35,7 @@ function Home() {
             .then(response => response.json())
             .then(categoriesAPI => {
                 setCategories(categoriesAPI.categories);
-                console.log(categoriesAPI.categories);
+                // console.log(categoriesAPI.categories);
             });
     }, []);
 
@@ -73,77 +73,80 @@ function Home() {
 
     return (
         <div className="Home">
-            <Searchbar />
-            <RandomCard />
-            <section className="homeAreaWrapper">
-                <h2>Areas</h2>
-                {/* <SeeAll
+            <div className="unterHome">
+                <div>
+                    <Searchbar />
+                    <RandomCard />
+                    <section className="homeAreaWrapper">
+                        <div className="CatAreaSeeAll">  <h2>Areas</h2>
+                            {/* <SeeAll
                     allLink={"/search/areas"}
                 /> */}
-                {/* ========== Alle Area Buttons ============ */}
-                {/* <button onClick={showAllArea} className="seeAllButton">seeAll</button> */}
-                <SeeAll
-                    functionBtn={showAllArea}
-                    name={nameButton1}
-                />
-                {areas?.map((object, index) => {
-                    // console.log(object.strArea)
-                    return (
-                        <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
-                            <button className="all_buttons" >{object.strArea} </button>
-                        </Link>
-                    )
+                            {/* ========== Alle Area Buttons ============ */}
+                            {/* <button onClick={showAllArea} className="seeAllButton">seeAll</button> */}
+                            <SeeAll
+                                functionBtn={showAllArea}
+                                name={nameButton1}
+                            />
+                        </div>
+                        {areas?.map((object, index) => {
+                            // console.log(object.strArea)
+                            return (
+                                <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
+                                    <button className="all_buttons" >{object.strArea} </button>
+                                </Link>
+                            )
 
-                })}
-                {/* ============ */}
-            </section>
-            <section className="areaButtonsWrapper">
-                <Buttons
-                    buttonName={"American"}
-                    buttonLink={"/search/areas&American"}
-                />
-                <Buttons
-                    buttonName={"British"}
-                    buttonLink={"/search/areas&British"}
-                />
-                <Buttons
-                    buttonName={"Dutch"}
-                    buttonLink={"/search/areas&Dutch"}
-                />
-            </section>
-
-
-            <section className="homeCatWrapper">
-                <h2>Categories</h2>
-                <SeeAll
-                    functionBtn={showAllCategory}
-                    name={nameButton2}
-                />
-                {/* ========== Alle Category Buttons ============ */}
-                {/* <button onClick={showAllCategory} className="seeAllButton">seeAll</button> */}
-                {categories?.map((object, index) => {
-                    console.log(object);
-                    return (
-                        // <Link to={`/search/${object.strCategory}`} className={seeCategory} key={index}>
-                        //     <button className="all_buttons"> {object.strCategory} </button>
-                        // </Link>
-                        <CategoryButtons
-                            classBtn={seeCategory}
-                            key={index}
-                            url={object.strCategoryThumb}
-                            cat={object.strCategory}
-                            link={`/search/category&${object.strCategory}`}
+                        })}
+                        {/* ============ */}
+                    </section>
+                    <section className="areaButtonsWrapper">
+                        <Buttons
+                            buttonName={"American"}
+                            buttonLink={"/search/areas&American"}
                         />
-                    )
+                        <Buttons
+                            buttonName={"British"}
+                            buttonLink={"/search/areas&British"}
+                        />
+                        <Buttons
+                            buttonName={"Dutch"}
+                            buttonLink={"/search/areas&Dutch"}
+                        />
+                    </section>
 
-                })}
-                {/* ============ */}
-            </section>
+                </div>
+                <section className="homeCatWrapper">
 
-            <div className="catButtonWrapper">
-                <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/category&Beef"} />
-                <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/category&Chicken"} />
-                <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/category&Dessert"} />
+                    <div className="CatAreaSeeAll">  <h2>Categories</h2>
+                        <SeeAll
+                            functionBtn={showAllCategory}
+                            name={nameButton2}
+                        /></div>
+                    {/* ========== Alle Category Buttons ============ */}
+                    {/* <button onClick={showAllCategory} className="seeAllButton">seeAll</button> */}
+                    {categories?.map((object, index) => {
+                        // console.log(object);
+                        return (
+                            // <Link to={`/search/${object.strCategory}`} className={seeCategory} key={index}>
+                            //     <button className="all_buttons"> {object.strCategory} </button>
+                            // </Link>
+                            <CategoryButtons
+                                classBtn={seeCategory}
+                                key={index}
+                                url={object.strCategoryThumb}
+                                cat={object.strCategory}
+                                link={`/search/category&${object.strCategory}`}
+                            />
+                        )
+                    })}
+                    {/* ============ */}
+                </section>
+                <div className="catButtonWrapper">
+                    <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/category&Beef"} classBtn={"singleDrei"} />
+                    <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/category&Chicken"} classBtn={"singleDrei"} />
+                    <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/category&Dessert"} classBtn={"singleDrei"} />
+                </div>
             </div>
 
             <Navbar
@@ -152,7 +155,6 @@ function Home() {
                 favs={favsWhite}
                 profil={profil}
             />
-
         </div>
     );
 }

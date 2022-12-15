@@ -9,6 +9,10 @@
     margin: 1rem 0;
 }
 
+.detailsShown article {
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+}
+
 .detailsHidden {
     display: none;
 }

@@ -15,12 +15,12 @@ function Searchbar(props) {
 
 
     useEffect(() => {
-        console.log("render fetch area search")
+        // console.log("render fetch area search")
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue ? inputValue : ""}`)
             .then(response => response.json())
             .then(singleArea => {
                 setSearchName(singleArea.meals);
-                console.log(singleArea);
+                // console.log(singleArea);
                 if (singleArea !== undefined && searchId === undefined) {
                     setInputArray(searchName);
                 }
@@ -29,7 +29,7 @@ function Searchbar(props) {
 
 
     useEffect(() => {
-        console.log("render fetch area search")
+        // console.log("render fetch area search")
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${inputValue ? inputValue : ""}`)
             .then(response => response.json())
             .then(singleArea => {
@@ -43,7 +43,7 @@ function Searchbar(props) {
 
 
     useEffect(() => {
-        console.log("render fetch area search")
+        // console.log("render fetch area search")
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${inputValue ? inputValue : ""}`)
             .then(response => response.json())
             .then(singleArea => {
@@ -57,7 +57,7 @@ function Searchbar(props) {
 
 
     useEffect(() => {
-        console.log("render fetch cat search")
+        // console.log("render fetch cat search")
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${inputValue ? inputValue : ""}`)
             .then(response => response.json())
             .then(singleCat => {
@@ -72,12 +72,12 @@ function Searchbar(props) {
     const [see, setSee] = useState("detailsHidden");
 
 
-    console.log("searchArea: " + searchArea);
-    console.log(searchCat);
-    console.log(searchName);
-    console.log(searchId);
+    // console.log("searchArea: " + searchArea);
+    // console.log(searchCat);
+    // console.log(searchName);
+    // console.log(searchId);
 
-    console.log(inputArray)
+    // console.log(inputArray)
 
     return (
         <div className="Searchbar">
