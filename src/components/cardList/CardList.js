@@ -115,7 +115,7 @@ function CardList() {
                 <div className="buttonCloud">
                     {areasList?.map((singleArea, index) => {
                         return <Buttons key={index} buttonName={singleArea.strArea
-                        } classBtn={index > 2 ? see : " "} buttonLink={`/search/areas&${singleArea.strArea}`} />
+                        } classBtn={index > 2 ? see : "inline_block"} buttonLink={`/search/areas&${singleArea.strArea}`} />
                     })}
                 </div>
                 {/* Recipe overview */}
@@ -146,18 +146,20 @@ function CardList() {
                 }} name={nameBtn} />
 
                 {/* List of Buttons */}
-                {catList?.map((singleCat, index) => {
-                    return <Buttons key={index} buttonName={singleCat.strCategory
-                    } classBtn={index > 2 ? see : "inlineBlock"} buttonLink={`/search/category&${singleCat.strCategory}`} />
-                })}
-
+                <div className="buttonCloud">
+                    {catList?.map((singleCat, index) => {
+                        return <Buttons key={index} buttonName={singleCat.strCategory
+                        } classBtn={index > 2 ? see : "inlineBlock"} buttonLink={`/search/category&${singleCat.strCategory}`} />
+                    })}
+                </div>
                 {/* Recipe overview */}
-                {chosenCat?.map((singleDish, index) => {
-                    return <Card key={index} url={singleDish.strMealThumb
-                    } name={singleDish.strMeal
-                    } link={`/details/${singleDish.idMeal}`} />
-                })}
-
+                <div className="imgCloud">
+                    {chosenCat?.map((singleDish, index) => {
+                        return <Card key={index} url={singleDish.strMealThumb
+                        } name={singleDish.strMeal
+                        } link={`/details/${singleDish.idMeal}`} />
+                    })}
+                </div>
             </div>
         )
     }

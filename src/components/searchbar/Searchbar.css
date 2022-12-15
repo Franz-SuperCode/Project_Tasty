@@ -1,3 +1,35 @@
 .suche {
     height: 40px;
 }
+
+.imgCloud {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+    text-align: center;
+}
+
+.imgCloud img {
+    margin-top: 0.5rem;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.imgCloud a {
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    margin: 0 0.5rem 2rem 0.5rem;
+
+}
+
+.imgCloud p {
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    padding: 0.5rem 0 0.5rem 0;
+
+}
