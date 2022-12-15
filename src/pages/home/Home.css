@@ -8,12 +8,14 @@
 
 .homeAreaWrapper {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    height: 40px;
 }
 
 .homeCatWrapper {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    height: 40px;
 }
 
 .areaButtonsWrapper {
@@ -25,8 +27,10 @@
 .catButtonWrapper {
     display: flex;
     justify-content: flex-start;
-    width: 90%;
+    width: 200%;
+    height: 250px;
     overflow: scroll;
+
 }
 
 .all_buttons {

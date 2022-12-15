@@ -7,11 +7,14 @@ import lupeBlau from "../../assets/img/lupeBlau.svg"
 // import lupeWhite from "../../assets/img/lupeWhite.svg"
 import favsWhite from "../../assets/img/favsWhite.svg"
 import profil from "../../assets/img/profilWhite.svg"
-import Areas from "../../components/areas/Areas"
+import CardList from "../../components/cardList/CardList";
+import Searchbar from "../../components/searchbar/ Searchbar";
+
 
 function Search() {
     return (<div>
-        <Areas />
+        <Searchbar />
+        <CardList />
         <Navbar
             homeBlau={homeWhite}
             lupeWhite={lupeBlau}

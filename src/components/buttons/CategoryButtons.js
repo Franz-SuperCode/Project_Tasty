@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "./CategoryButtons.css"
 
 function CategoryButtons(props) {
     return (

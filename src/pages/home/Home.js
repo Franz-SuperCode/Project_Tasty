@@ -90,15 +90,15 @@ function Home() {
             <section className="areaButtonsWrapper">
                 <Buttons
                     buttonName={"American"}
-                    buttonLink={"/search/American"}
+                    buttonLink={"/search/areas&American"}
                 />
                 <Buttons
                     buttonName={"British"}
-                    buttonLink={"/search/British"}
+                    buttonLink={"/search/areas&British"}
                 />
                 <Buttons
                     buttonName={"Dutch"}
-                    buttonLink={"/search/Dutch"}
+                    buttonLink={"/search/areas&Dutch"}
                 />
             </section>
 
@@ -130,9 +130,9 @@ function Home() {
             </section>
 
             <div className="catButtonWrapper">
-                <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/Beef"} />
-                <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/Chicken"} />
-                <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/Dessert"} />
+                <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/category&Beef"} />
+                <CategoryButtons url={"https://www.themealdb.com/images/category/chicken.png"} cat={"Chicken"} link={"/search/category&Chicken"} />
+                <CategoryButtons url={"https://www.themealdb.com/images/category/dessert.png"} cat={"Dessert"} link={"/search/category&Dessert"} />
             </div>
 
             <Navbar

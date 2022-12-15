@@ -1,0 +1,19 @@
+.catButton {
+    text-decoration: none;
+    color: black;
+}
+
+.catCard {
+    border-radius: 25px;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+    margin: 15px 5px;
+    padding: 20px;
+}
+
+.catCard h2 {
+    font-size: 1.1rem;
+}
+
+.catImg {
+    width: 99%;
+}
