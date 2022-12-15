@@ -3,10 +3,12 @@
     list-style-type: none;
     justify-content: space-between;
     height: 10vh;
-    /* width: 100%; */
+    width: 100%;
     border-radius: 25px 25px 0 0;
     box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 15%);
     padding: 25px 37px;
-    /* position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: -1px;
+    left: 0;
+    background-color: white;
 }

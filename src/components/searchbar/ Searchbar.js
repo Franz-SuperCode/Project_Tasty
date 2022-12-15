@@ -95,7 +95,7 @@ function Searchbar(props) {
     // console.log(searchName);
     // console.log(searchId + 2);
 
-    console.log(inputArray)
+    // console.log(inputArray)
 
     return (
         <div className="Searchbar">

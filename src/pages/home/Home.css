@@ -1,3 +1,8 @@
+.unterHome {
+    padding: 30px 30px 80px 30px;
+    /* padding: 0 30px; */
+}
+
 .threeButtons {
     padding: 0.5rem 1rem;
     background-color: #F1F5F5;
@@ -10,6 +15,7 @@
     margin-top: 1rem;
     /* margin-bottom: 2rem; */
     height: 40px;
+    /* padding: 0 30px; */
 }
 
 .homeCatWrapper {
@@ -18,19 +24,30 @@
     height: 40px;
 }
 
+.CatAreaSeeAll {
+    /* width: 90%; */
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 30px; */
+}
+
 .areaButtonsWrapper {
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    margin: 1rem 0;
+    /* padding: 0 30px; */
 }
 
 .catButtonWrapper {
     display: flex;
     justify-content: flex-start;
-    width: 200%;
-    height: 250px;
+    width: 95vw;
+    margin-left: -10px;
+    margin-right: -20%;
     overflow: scroll;
-
+    /* padding: 0 30px; */
+    padding-right: -20px;
 }
 
 .all_buttons {
@@ -42,4 +59,28 @@
     border-radius: 25px;
     color: #fafafa;
     border: none;
+}
+
+.singleDrei {
+    text-decoration: none;
+}
+
+.singleDrei article {
+    border-radius: 25px;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    padding: 13px;
+}
+
+.singleDrei article img {
+    width: 100%;
+    border-radius: 100px;
+    margin-top: 5%;
+}
+
+.singleDrei article h2 {
+    margin: 10% 0 0 5%;
+    color: black;
 }
