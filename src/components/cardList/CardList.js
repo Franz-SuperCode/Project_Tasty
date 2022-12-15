@@ -16,8 +16,8 @@ function CardList() {
     const value = params.value;
     const type = params.type;
 
-    console.log(value);
-    console.log(type);
+    // console.log(value);
+    // console.log(type);
 
 
     // const [criteria, setCriteria] = useState("American");
@@ -37,7 +37,7 @@ function CardList() {
     // =============================
     const [areasList, setAreasList] = useState();
     useEffect(() => {
-        console.log("render fetch areaList")
+        // console.log("render fetch areaList")
         fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`)
             .then(response => response.json())
             .then(areasAPI => {
@@ -48,7 +48,7 @@ function CardList() {
 
     const [chosenArea, setChosenArea] = useState();
     useEffect(() => {
-        console.log("render fetch area")
+        // console.log("render fetch area")
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${value !== "areas" ? value : "America"}`)
             .then(response => response.json())
             .then(singleArea => {
@@ -59,7 +59,7 @@ function CardList() {
 
     const [catList, setCatList] = useState();
     useEffect(() => {
-        console.log("render fetch catList")
+        // console.log("render fetch catList")
         fetch(`https://www.themealdb.com/api/json/v1/1/list.php?c=list`)
             .then(response => response.json())
             .then(catAPI => {
@@ -68,11 +68,11 @@ function CardList() {
             });
     }, []);
 
-    console.log(catList)
+    // console.log(catList)
 
     const [chosenCat, setChosenCat] = useState();
     useEffect(() => {
-        console.log("render fetch cat")
+        // console.log("render fetch cat")
         fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${value ? value : "Beef"}`)
             .then(response => response.json())
             .then(singleCat => {
@@ -82,9 +82,9 @@ function CardList() {
     }, [value]);
 
 
-    console.log(chosenCat);
-    console.log(areasList);
-    console.log(chosenArea);
+    // console.log(chosenCat);
+    // console.log(areasList);
+    // console.log(chosenArea);
 
     // ============================
     // ClassName Hidden or Shown
