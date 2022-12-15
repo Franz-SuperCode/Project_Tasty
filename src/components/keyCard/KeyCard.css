@@ -1,0 +1,11 @@
+.keyCardWrapper {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.keyCardWrapper img {
+    width: 35%;
+    object-fit: cover;
+}
