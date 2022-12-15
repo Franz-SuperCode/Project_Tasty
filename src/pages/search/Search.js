@@ -1,4 +1,5 @@
 
+import Buttons from "../../components/buttons/Buttons";
 import Navbar from "../../components/navbar/Navbar";
 // import homeBlau from "../../assets/img/homeBlau.svg"
 import homeWhite from "../../assets/img/homeWhite.svg"

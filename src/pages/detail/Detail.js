@@ -26,6 +26,7 @@ function Detail() {
             .then(response => response.json())
             .then(detailData => {
                 setDetailData(detailData.meals[0]);
+                // ingredients();
             });
     }, []);
 
@@ -55,23 +56,8 @@ function Detail() {
     ingredientArray.push(detailData?.strMeasure18 + " " + detailData?.strIngredient18);
     ingredientArray.push(detailData?.strMeasure19 + " " + detailData?.strIngredient19);
     ingredientArray.push(detailData?.strMeasure20 + " " + detailData?.strIngredient20);
-
-
-    // console.log(detailData?.strInstructions)
-
-    // for (let i = 1; i <= 20; i++) {
-    //     // if ()
-    //     console.log(detailData?.strIngredient + `${i}`);
     // }
 
-    // const regex = /Ingredient/g;
-    // const found = detailData.match(regex);
-
-    // console.log(found);
-
-    // for (let i = 0; i <= 20; i++) {
-    //     ingredientArray.push(detailData[detailData.indexOf("strIngredient1") + i]);
-    // }
 
 
     // Switch between ingredients and instructions
@@ -79,6 +65,30 @@ function Detail() {
     const [detailsInstructions, setDetailsInstructions] = useState("detailsHidden");
     const [switchColorIng, setSwitchColorIng] = useState("buttonActive");
     const [switchColorIns, setSwitchColorIns] = useState("");
+
+    // ===================
+
+    let modifiedInstr = detailData?.strInstructions;
+
+    let newSentences = modifiedInstr?.split(". ")
+
+    let newModifiedString = [];
+    let tempString = "";
+    // Durch jeden Satz loopen im Array
+    for (let i = 0; i < newSentences?.length; i++) {
+        // Die Sätze vom Array in den String packen
+        tempString += newSentences[i] + ". ";
+        // Falls der aktuelle Satz der dritte in der Gruppe ist
+        if (i % 3 === 2) {
+            // Ein <br> nach dem aktullem Satz einfügen
+            newModifiedString.push(tempString);
+            tempString = "";
+        }
+    }
+
+    // ====================
+
+
 
     return (
         <div className="detailsWrapper">
@@ -120,7 +130,10 @@ function Detail() {
                     })}
 
                 </section>
-                <section className={detailsInstructions}>
+
+
+
+                {/* <section className={detailsInstructions}>
                     <h3 className="detailsMainSec">Instructions</h3>
                     <article>
                         <p>{detailData?.strInstructions
@@ -128,7 +141,24 @@ function Detail() {
                         <a href={detailData?.strYoutube
                         } target="_blank" rel="noreferrer">VIDEO</a>
                     </article>
+                </section> */}
+
+                <section className={detailsInstructions}>
+                    <h3 className="detailsMainSec">Instructions</h3>
+                    <article>
+                        {/* //Arrayinhalt aus 3 Sätzen in eine Karte */}
+                        {newModifiedString.map((item, index) =>
+                            <p className="p_modifiedString" key={index}>{item}</p>
+                        )}
+                        {/* <p>{newModifiedString}</p> */}
+                        <a href={detailData?.strYoutube
+                        } target="_blank" rel="noreferrer">VIDEO</a>
+                    </article>
                 </section>
+
+
+
+
             </div>
             <Navbar
                 homeBlau={homeWhite}
