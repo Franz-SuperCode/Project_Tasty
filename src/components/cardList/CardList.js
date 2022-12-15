@@ -112,18 +112,20 @@ function CardList() {
                 }} name={nameBtn} />
 
                 {/* List of Buttons */}
-                {areasList?.map((singleArea, index) => {
-                    return <Buttons key={index} buttonName={singleArea.strArea
-                    } classBtn={index >= 2 ? see : " "} buttonLink={`/search/areas&${singleArea.strArea}`} />
-                })}
-
+                <div className="buttonCloud">
+                    {areasList?.map((singleArea, index) => {
+                        return <Buttons key={index} buttonName={singleArea.strArea
+                        } classBtn={index > 2 ? see : " "} buttonLink={`/search/areas&${singleArea.strArea}`} />
+                    })}
+                </div>
                 {/* Recipe overview */}
-                {chosenArea?.map((singleDish, index) => {
-                    return <Card key={index} url={singleDish.strMealThumb
-                    } name={singleDish.strMeal
-                    } link={`/details/${singleDish.idMeal}`} />
-                })}
-
+                <div className="imgCloud">
+                    {chosenArea?.map((singleDish, index) => {
+                        return <Card key={index} url={singleDish.strMealThumb
+                        } name={singleDish.strMeal
+                        } link={`/details/${singleDish.idMeal}`} />
+                    })}
+                </div>
             </div>
         )
     }
