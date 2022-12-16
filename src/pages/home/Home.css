@@ -9,6 +9,7 @@
     border: none;
     margin: 0.3rem;
     border-radius: 20px;
+    font-size: 1.6rem;
 }
 
 .homeAreaWrapper {
@@ -97,4 +98,25 @@
 .singleDrei article h2 {
     margin: 10% 0 0 5%;
     color: black;
+}
+
+
+@media only screen and (min-width:768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    html {
+        font-size: 18px;
+    }
+
+    /* .seeAll {
+        display: none;
+    } */
+
+    /* #catButtonWrapper{
+        display: ;
+    } */
 }

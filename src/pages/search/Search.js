@@ -13,17 +13,18 @@ import SearchHeader from "./SearchHeader";
 
 
 function Search() {
-    return (<div>
-        <SearchHeader />
-        <Searchbar />
-        <CardList />
-        <Navbar
-            homeBlau={homeWhite}
-            lupeWhite={lupeBlau}
-            favs={favsWhite}
-            profil={profil}
-        />
-    </div>)
+    return (
+        <div className="searchPage">
+            <SearchHeader />
+            <Searchbar />
+            <CardList />
+            <Navbar
+                homeBlau={homeWhite}
+                lupeWhite={lupeBlau}
+                favs={favsWhite}
+                profil={profil}
+            />
+        </div>)
 }
 export default Search;
 

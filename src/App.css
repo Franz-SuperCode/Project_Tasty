@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    max-width: 1200px;
+    font-size: 10px;
+}
 
 .favoritePage {
     background-color: rgb(61, 160, 167, 1);
