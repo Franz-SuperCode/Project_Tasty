@@ -41,13 +41,12 @@ function Searchbar(props) {
                 // if (singleArea.meal !== null || undefined && searchId === undefined || null && !inputArray) {
                 // setSearchName(singleArea.meals);
                 // console.log(singleArea);}
-                if (singleArea.meal !== null || undefined && !inputArray) {
+                // if ((singleArea.meal !== null || undefined) && (!inputArray)) {
+                //     setInputArray(singleArea.meals);
+                if ((singleArea.meal !== null || undefined)) {
                     setInputArray(singleArea.meals);
                 }
-                else if (singleArea !== null || undefined && inputArray !== null || undefined) {
-                    const push2 = arrayCat2.push(singleArea.meals);
-                    setInputArray(arrayCat2)
-                }
+
             });
     }, [inputValue]);
 
@@ -74,21 +73,61 @@ function Searchbar(props) {
             .then(response => response.json())
             .then(singleArea => {
                 // setSearchArea(singleArea.meals);
-                if (singleArea.meals !== null || undefined && !inputArray) {
+                // if ((singleArea.meals !== null || undefined) && (!inputArray)) {
+                //     setInputArray(singleArea.meals);
+                // }
+                if ((singleArea.meals !== null || undefined)) {
                     setInputArray(singleArea.meals);
-                } else if (singleArea.meals !== null || undefined && inputArray !== null || undefined) {
-                    const push = arrayCat.push(singleArea.meals);
-                    setInputArray(arrayCat)
                 }
                 // console.log(singleArea)
             });
     }, [inputValue]);
 
 
+    console.log(inputValue);
+    console.log(inputArray);
+
+    const [outputText, setOutputText] = useState();
+
+    // useEffect(() => {
+    //     if (inputValue === (undefined || null || "")) {
+    //         setOutputText("")
+    //     }
+    //     else if (inputValue !== (undefined || null || "") && inputArray !== (undefined || null || "")) {
+    //         setOutputText("Following results match your search:")
+    //     } else if (inputValue !== (undefined || null || "") && inputArray === (undefined || null || "")) {
+    //         setOutputText("No results match your search, please try again or see our categories for inspiration.")
+    //     }
+    // }, [inputValue])
 
 
-    const [see, setSee] = useState("detailsShown");
+    useEffect(() => {
+        if (!inputValue) {
+            setOutputText("");
+            setInputValue(null)
+            setSee("detailsHidden")
+        }
+        else if (inputValue === "") {
+            setInputArray(null);
+            setOutputText("");
+            setSee("detailsHidden")
+        }
+        else if (inputValue && inputArray) {
+            setOutputText("Following results match your search request:");
+            setSee("detailsShown")
+        } else if (inputValue && !inputArray) {
+            setOutputText("No results match your search request, please try again or see our categories for inspiration.");
+            setSee("detailsShown")
+        }
+    }, [inputValue])
 
+
+    console.log(outputText);
+
+
+
+    const [see, setSee] = useState();
+    console.log(see)
 
     // console.log(searchArea);
     // console.log(searchCat);
@@ -99,17 +138,20 @@ function Searchbar(props) {
 
     return (
         <div className="Searchbar">
-            <div>
-                <img src={Lupe} alt="Lupe" />
+            <div className="searchbarWrapper">
+                <img src={Lupe} alt="Lupe" className="lupe" />
                 <input type="text" className="suche" id={props.searchId} onChange={e => setInputValue(e.target.value)} placeholder="Search" />
             </div>
             <div className={see} >
-                <p>Test</p>
+                <h5 className="returnMsg">{outputText}</h5>
                 {inputArray?.map((singleValue, index) => {
                     console.log("Test Map Array")
-                    return <KeyCard key={index} url={singleValue.strMealThumb
-                    } name={singleValue.strMeal} cat={singleValue.strCategory
-                    } link={`/details/${singleValue.idMeal}`} />
+                    return (
+
+                        <KeyCard key={index} url={singleValue.strMealThumb
+                        } name={singleValue.strMeal} cat={singleValue.strCategory
+                        } link={`/details/${singleValue.idMeal}`} />
+                    )
                 })}
             </div>
         </div>
