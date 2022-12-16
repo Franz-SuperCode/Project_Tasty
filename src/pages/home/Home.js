@@ -92,7 +92,7 @@ function Home() {
                         <div className="buttonCloud">
                             {areas?.map((object, index) => {
                                 return (
-                                    <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
+                                    <Link to={`/search/areas&${object.strArea}`} className={seeArea} key={index}>
                                         <button className="all_buttons" >{object.strArea} </button>
                                     </Link>
                                 )
