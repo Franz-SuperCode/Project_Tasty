@@ -14,14 +14,25 @@
 .homeAreaWrapper {
     margin-top: 1rem;
     /* margin-bottom: 2rem; */
-    height: 40px;
+    /* height: 40px; */
     /* padding: 0 30px; */
 }
+
+/* .buttonCloud {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.3rem;
+    margin: 0 1rem 1rem 1rem;
+} */
 
 .homeCatWrapper {
     margin-top: 2rem;
     /* margin-bottom: 2rem; */
     height: 40px;
+}
+
+.bottomPadding {
+    padding-bottom: 100px;
 }
 
 .CatAreaSeeAll {
@@ -36,6 +47,7 @@
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;
+    gap: 7px;
     /* padding: 0 30px; */
 }
 
@@ -55,14 +67,16 @@
     text-decoration: none;
     text-align: center;
     padding: 1rem;
-    background-color: #70B9BE;
+    background-color: #F1F5F5;
     border-radius: 25px;
-    color: #fafafa;
+    color: black;
     border: none;
 }
 
+
 .singleDrei {
     text-decoration: none;
+
 }
 
 .singleDrei article {

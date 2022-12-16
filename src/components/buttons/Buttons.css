@@ -1,6 +1,6 @@
 .seeAll {
     text-align: right;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
 }
 
 .seeAllButton {
@@ -18,9 +18,7 @@
     margin: 0.2rem;
     margin: 0.2rem auto;
     width: 100%;
-
 }
-
 
 .areaButtons {
     width: 100%;
