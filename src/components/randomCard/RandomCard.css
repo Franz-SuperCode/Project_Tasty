@@ -43,7 +43,9 @@
 .randomCatAr {
     display: flex;
     justify-content: space-between;
-    width: 95%
+    align-items: center;
+    width: 95%;
+
 }
 
 /* .randomDiv2 {
