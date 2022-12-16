@@ -18,6 +18,7 @@
 
 .lupe {
     align-self: center;
+    margin-left: 1rem;
 }
 
 .imgCloud {
@@ -92,4 +93,37 @@
     margin: 1.5rem auto;
     width: 85%;
     text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+    .recipeCard {
+        /* width: 85%; */
+    }
+
+    .imgCloud {
+        margin: 2rem;
+    }
+
+    .imgCloud a {
+        margin: 2rem
+    }
+
+    .searchbarWrapper {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .searchbarWrapper input {
+        font-size: 1.2rem;
+    }
+
+    .searchHeader a {
+        position: absolute;
+        left: 2rem;
+    }
+
+    .searchHeader h2 {
+        width: 100%;
+        text-align: center;
+    }
 }

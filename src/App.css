@@ -1,11 +1,16 @@
 /* Das Hintergrund-blau hat folgende Werte: rgb(61, 160, 167, 1); */
 
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets//fonts/Montserrat-VariableFont_wght.ttf");
+}
 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
 
