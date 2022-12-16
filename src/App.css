@@ -7,3 +7,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+.favoritePage {
+    background-color: rgb(61, 160, 167, 1);
+}
+
+.constWrapper {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.constructionText {
+    font-size: 1.4rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.dummyLogo {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.dummyLogo img {
+    width: 100%;
+}
