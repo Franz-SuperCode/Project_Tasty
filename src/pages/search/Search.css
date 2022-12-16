@@ -1,8 +1,12 @@
+.searchPage {
+    padding: 30px 30px 80px 30px;
+}
+
 .searchHeader {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30vw;
+    gap: 20vw;
     padding: 1rem;
 }
 

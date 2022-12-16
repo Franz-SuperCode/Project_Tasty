@@ -49,11 +49,11 @@ function Home() {
     function showAllArea() {
         if (seeArea === "detailsShown") {
             setSeeArea("detailsHidden");
-            setNameButton1("SeeAll")
+            setNameButton1("See All")
             document.querySelector(".areaButtonsWrapper").style.display = "flex"
         } else {
             setSeeArea("detailsShown")
-            setNameButton1("SeeLess")
+            setNameButton1("See Less")
             document.querySelector(".areaButtonsWrapper").style.display = "none"
         }
 
@@ -62,11 +62,11 @@ function Home() {
     function showAllCategory() {
         if (seeCategory === "detailsShown") {
             setSeeCategory("detailsHidden");
-            setNameButton2("SeeAll");
+            setNameButton2("See All");
             document.querySelector(".catButtonWrapper").style.display = "flex";
         } else {
             setSeeCategory("detailsShown");
-            setNameButton2("SeeLess");
+            setNameButton2("See Less");
             document.querySelector(".catButtonWrapper").style.display = "none"
         }
     }
