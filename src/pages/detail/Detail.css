@@ -1,5 +1,6 @@
 .detailsShown {
     display: inline-block;
+    text-decoration: none;
 }
 
 .detailsShown p {
@@ -7,10 +8,26 @@
     box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
     border-radius: 10px;
     margin: 1rem 0;
+
 }
 
 .detailsShown article {
     box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+    border-radius: 25px;
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 15%);
+    margin: 10px;
+}
+
+.detailsShown article img {
+    width: 100%;
+    border-radius: 30px;
+
+    padding: 5% 5% 0 5%;
+}
+
+.detailsShown article h2 {
+    color: black;
+    padding: 1% 0 5% 10%;
 }
 
 .detailsHidden {

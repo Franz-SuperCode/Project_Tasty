@@ -11,7 +11,7 @@ function Navbar(props) {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/search">
+                    <Link to="/search/category&Beef">
                         <img src={props.lupeWhite} className="lupeWhite" />
                     </Link>
                 </li>

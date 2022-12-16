@@ -89,29 +89,31 @@ function Home() {
                                 name={nameButton1}
                             />
                         </div>
-                        {areas?.map((object, index) => {
-                            // console.log(object.strArea)
-                            return (
-                                <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
-                                    <button className="all_buttons" >{object.strArea} </button>
-                                </Link>
-                            )
+                        <div className="buttonCloud">
+                            {areas?.map((object, index) => {
+                                return (
+                                    <Link to={`/search/${object.strArea}`} className={seeArea} key={index}>
+                                        <button className="all_buttons" >{object.strArea} </button>
+                                    </Link>
+                                )
 
-                        })}
+                            })}
+                        </div>
                         {/* ============ */}
                     </section>
                     <section className="areaButtonsWrapper">
                         <Buttons
                             buttonName={"American"}
-                            buttonLink={"/search/areas&American"}
+                            buttonLink={"/search/areas&American"} classBtn={"areaButtons inline_block"}
                         />
                         <Buttons
                             buttonName={"British"}
                             buttonLink={"/search/areas&British"}
+                            classBtn={"areaButtons inline_block"}
                         />
                         <Buttons
                             buttonName={"Dutch"}
-                            buttonLink={"/search/areas&Dutch"}
+                            buttonLink={"/search/areas&Dutch"} classBtn={"areaButtons inline_block"}
                         />
                     </section>
 
@@ -123,24 +125,26 @@ function Home() {
                             functionBtn={showAllCategory}
                             name={nameButton2}
                         /></div>
-                    {/* ========== Alle Category Buttons ============ */}
-                    {/* <button onClick={showAllCategory} className="seeAllButton">seeAll</button> */}
-                    {categories?.map((object, index) => {
-                        // console.log(object);
-                        return (
-                            // <Link to={`/search/${object.strCategory}`} className={seeCategory} key={index}>
-                            //     <button className="all_buttons"> {object.strCategory} </button>
-                            // </Link>
-                            <CategoryButtons
-                                classBtn={seeCategory}
-                                key={index}
-                                url={object.strCategoryThumb}
-                                cat={object.strCategory}
-                                link={`/search/category&${object.strCategory}`}
-                            />
-                        )
-                    })}
-                    {/* ============ */}
+                    <div className="bottomPadding">
+                        {/* ========== Alle Category Buttons ============ */}
+                        {/* <button onClick={showAllCategory} className="seeAllButton">seeAll</button> */}
+                        {categories?.map((object, index) => {
+                            // console.log(object);
+                            return (
+                                // <Link to={`/search/${object.strCategory}`} className={seeCategory} key={index}>
+                                //     <button className="all_buttons"> {object.strCategory} </button>
+                                // </Link>
+                                <CategoryButtons
+                                    classBtn={seeCategory}
+                                    key={index}
+                                    url={object.strCategoryThumb}
+                                    cat={object.strCategory}
+                                    link={`/search/category&${object.strCategory}`}
+                                />
+                            )
+                        })}
+                        {/* ============ */}
+                    </div>
                 </section>
                 <div className="catButtonWrapper">
                     <CategoryButtons url={"https://www.themealdb.com/images/category/beef.png"} cat={"Beef"} link={"/search/category&Beef"} classBtn={"singleDrei"} />

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./RandomCard.css"
 import Detail from "../../pages/detail/Detail"
-
+import dot from "../../assets/img/Ellipse87.svg"
 
 function RandomCard() {
     const [randomRecipe, setRandomRecipe] = useState();
@@ -25,7 +25,7 @@ function RandomCard() {
                         <h2 className='randomTitle'>{randomRecipe?.strMeal}</h2>
                         <img alt={randomRecipe?.strMeal} src={`${randomRecipe?.strMealThumb}`} className="randomBild" />
                         <div className='randomCatAr'>
-                            <p>{randomRecipe?.strCategory}</p>
+                            <div className='dotCat'> <img src={dot} /><p>{randomRecipe?.strCategory}</p></div>
                             <p>{randomRecipe?.strArea}</p>
                         </div>
                     </div>
