@@ -145,15 +145,16 @@ function Detail() {
 
                 <section className={detailsInstructions}>
                     <h3 className="detailsMainSec">Instructions</h3>
-                    <article>
+                    <section>
                         {/* //Arrayinhalt aus 3 Sätzen in eine Karte */}
                         {newModifiedString.map((item, index) =>
-                            <p className="p_modifiedString" key={index}>{item}</p>
+                            <article className="p_modifiedString" key={index}>{item}</article>
                         )}
                         {/* <p>{newModifiedString}</p> */}
-                        <a href={detailData?.strYoutube
-                        } target="_blank" rel="noreferrer">VIDEO</a>
-                    </article>
+
+                    </section>
+                    <a className="video" href={detailData?.strYoutube
+                    } target="_blank" rel="noreferrer">Video</a>
                 </section>
 
 
