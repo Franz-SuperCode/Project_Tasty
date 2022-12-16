@@ -15,7 +15,7 @@
 
 .constWrapper {
     width: 80%;
-    height: 99vh;
+    height: 80vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -26,4 +26,15 @@
 .constructionText {
     font-size: 1.4rem;
     text-align: center;
+    padding-bottom: 3rem;
+}
+
+.dummyLogo {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.dummyLogo img {
+    width: 100%;
 }
