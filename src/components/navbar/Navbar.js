@@ -6,7 +6,7 @@ function Navbar(props) {
         <nav className="Navbar"> <div>
             <ul>
                 <li>
-                    <Link to="/">
+                    <Link to="/home">
                         <img src={props.homeBlau} className="homeWhiteNav" />
                     </Link>
                 </li>
@@ -16,12 +16,12 @@ function Navbar(props) {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/landing">
+                    <Link to="/favorites">
                         <img src={props.favs} className="favs" />
                     </Link>
                 </li>
                 <li>
-                    <Link to="/landing">
+                    <Link to="/profile">
                         <img src={props.profil} className="profil" />
                     </Link>
                 </li>

@@ -16,9 +16,9 @@ function App() {
       <Router>
         <Routes>
 
-          <Route path="/loading" element={<Loading />} />
+          <Route path="/" element={<Loading />} />
           <Route path="/landing" element={<Landing />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
 
           <Route path="/details/:id" element={<Detail />} />
           <Route path="/search/:type&:value" element={<Search />} />
