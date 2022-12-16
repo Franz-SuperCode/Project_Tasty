@@ -18,6 +18,10 @@ html {
     font-size: 10px;
 }
 
+p {
+    font-size: 1rem;
+}
+
 .favoritePage {
     background-color: rgb(61, 160, 167, 1);
 }
